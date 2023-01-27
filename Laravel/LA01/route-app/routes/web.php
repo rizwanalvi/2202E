@@ -13,27 +13,45 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // return view('welcome');
-    echo "ok";
-});
-Route::get('/{id}', function ($id) {
-    // return view('welcome');
-    echo "Required Parameter".$id;
-});
+Route::resource('/std',App\Http\Controllers\StudentController::class);
 
-Route::get('/test/{id?}', function ($id=2) {
-    // return view('welcome');
-    echo "Optional Parameter".$id;
-});
+// Route::get('/', function () {
+//      return view('welcome');
+//     echo "ok";
+// });
 
-Route::get('/{page}/{id}', function ($page,$id) {
-    // return view('welcome');
-    # /product/1
-    echo $page.':'.$id;
-});
-Route::get('/dum/{page}/{id?}', function ($page,$id=null) {
-    // return view('welcome');
-    # /product/1
-    echo $page.':';
-});
+// Route::post('/', function (Request $req) {
+//     // return view('welcome');
+    
+//     $data = $req->all();
+//     var_dump($data);
+//     echo "Post Route";
+// });
+
+// Route::put('/update', function () {
+//     // return view('welcome');
+//     $data = Request::all();
+//     var_dump($data);
+//     echo "Post Route";
+// });
+
+// Route::get('/{id}', function ($id) {
+//     // return view('welcome');
+//     echo "Required Parameter".$id;
+// });
+
+// Route::get('/test/{id?}', function ($id=2) {
+//     // return view('welcome');
+//     echo "Optional Parameter".$id;
+// });
+
+// Route::get('/{page}/{id}', function ($page,$id) {
+//     // return view('welcome');
+//     # /product/1
+//     echo $page.':'.$id;
+// });
+// Route::get('/dum/{page}/{id?}', function ($page,$id=null) {
+//     // return view('welcome');
+//     # /product/1
+//     echo $page.':';
+// });
