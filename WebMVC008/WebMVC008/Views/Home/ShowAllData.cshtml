@@ -1,0 +1,27 @@
+﻿@model IEnumerable<WebMVC008.Models.Student>
+@{
+    ViewBag.Title = "ShowAllData";
+}
+
+<h2>ShowAllData</h2>
+
+<table class="table">
+    <tr>
+        <th>Student Id</th>
+        <th>Student Name</th>
+        <th>Student Semester</th>
+        <th>Student Batch</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.ID</td>
+        <td>@item.STDNAME</td>
+        <td>@item.SEM</td>
+        <td>@item.BATCH</td>
+        <td><div class="btn btn-group"> @Html.ActionLink("Edit", "Edit/" + item.ID, "Home", new { @class = "btn btn-success" })@Html.ActionLink("Delete", "Delete/" + item.ID, "Home", new { @class = "btn btn-danger" })</div></td>
+    </tr>
+
+    }
+
+</table>
