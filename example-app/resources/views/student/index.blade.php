@@ -1,4 +1,5 @@
-@extends('layout.app')
+@extends('layouts.app')
+
 @section('content')
 
 <a href="/student/create" class="btn btn-primary mt-1">Create</a>
